@@ -28,7 +28,7 @@ public class MissileObstacle : MonoBehaviour
             {
                 
                 isFlying = true;
-                AudioManager.instance.MissileSfx();
+                AudioManager.instance.PlaySound(SoundEffectType.MissileClip);
                 Debug.Log("£¬Æð·É£¡£¡£¡£¡£¡");
             
             }
@@ -40,7 +40,7 @@ public class MissileObstacle : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            AudioManager.instance.obstacleSfx();
+            AudioManager.instance.PlaySound(SoundEffectType.obstacleClip);
             GameManager.Instance.GameOver();
         }
     }

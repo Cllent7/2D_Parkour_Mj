@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, 0f);
             rb.velocity += Vector2.up * speedJump;
             jumpCount++;
-            AudioManager.instance.JumpSfx();
+            AudioManager.instance.PlaySound(SoundEffectType.jumpClip);
         }
     }
     public void StopMovement()

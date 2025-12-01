@@ -64,7 +64,8 @@ public class InfiniteMapGenerator : MonoBehaviour
        
         foreach (var segment in activeSegments)
         {
-            segment.SetActive(false);
+            if (segment != null) // Ìí¼Ónull¼ì²é
+                segment.SetActive(false);
         }
         activeSegments.Clear();
         lastSegmentEndX = 0;

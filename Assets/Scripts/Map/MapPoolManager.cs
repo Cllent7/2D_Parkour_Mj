@@ -16,12 +16,16 @@ public class MapPoolManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+
         }
         else
         { 
             Destroy(gameObject);
         }
+        CreatePool();
+    }
+    void CreatePool()
+    {
         foreach (var prefab in segmentPrefabs)
         {
             Queue<GameObject> pool = new Queue<GameObject>();
@@ -45,6 +49,7 @@ public class MapPoolManager : MonoBehaviour
 
         var pool = segmentPools[randomIndex];
         GameObject segmentToSpawn = pool.Dequeue();
+        
         segmentToSpawn.SetActive(true);
         pool.Enqueue(segmentToSpawn);
         return segmentToSpawn;

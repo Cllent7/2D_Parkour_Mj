@@ -16,7 +16,7 @@ public class MyData : ScriptableObject
         get => recentDistances;
         set => recentDistances = value;
     }
-
+     
     public float FarthestDistance
     {
         get => farthestDistance;

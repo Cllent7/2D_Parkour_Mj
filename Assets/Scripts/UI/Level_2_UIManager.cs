@@ -75,7 +75,7 @@ public class Level_2_UIManager:MonoBehaviour
     }
     public void ToMain()
     {
-        AudioManager.instance.ButtonSfx();
+        AudioManager.instance.PlaySound(SoundEffectType.ButtonClip);
         SceneManager.LoadScene("Statr_Scene");
     }
     private void OnDestroy()

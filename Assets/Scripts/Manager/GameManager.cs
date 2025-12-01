@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         gameDate.currentStar = 0;
         PlayerController.Instance.ResetPosition();
-        AudioManager.instance.ButtonSfx();
+        AudioManager.instance.PlaySound(SoundEffectType.ButtonClip);
         GameEvents.TriggerGameReset();
         //更新文本
         GameEvents.TriggerScoreUpdated(gameDate.currentStar);

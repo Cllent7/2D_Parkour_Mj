@@ -29,7 +29,7 @@ public class UICommonModule
     // ÔÝÍ£
     public void OnPause()
     {
-        AudioManager.instance.ButtonSfx();
+        AudioManager.instance.PlaySound(SoundEffectType.ButtonClip);
         Time.timeScale = 0;
         pausePanel.SetActive(true);
     }
@@ -37,7 +37,7 @@ public class UICommonModule
     // ¼ÌÐø
     public void OnContinue()
     {
-        AudioManager.instance.ButtonSfx();
+        AudioManager.instance.PlaySound(SoundEffectType.ButtonClip);
         Time.timeScale = 1;
         pausePanel.SetActive(false);
     }

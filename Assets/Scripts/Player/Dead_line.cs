@@ -8,7 +8,7 @@ public class Dead_line : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            AudioManager.instance.obstacleSfx();
+            AudioManager.instance.PlaySound(SoundEffectType.obstacleClip);
             GameManager.Instance.GameOver();
         }
     }

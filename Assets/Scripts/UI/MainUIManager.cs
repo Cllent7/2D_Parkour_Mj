@@ -22,7 +22,6 @@ public class MainUIManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
 
         }
         else
@@ -40,31 +39,31 @@ public class MainUIManager : MonoBehaviour
 
     public void OnStartLevel()
     {
-        AudioManager.instance.ButtonSfx();
+        AudioManager.instance.PlaySound(SoundEffectType.ButtonClip);
         SceneManager.LoadScene("Level1");
     }
     private void OnStartLevel2()
     {
-        AudioManager.instance.ButtonSfx();
+        AudioManager.instance.PlaySound(SoundEffectType.ButtonClip);
         SceneManager.LoadScene("Level2");
     }
     private void OnrankingList()
     {
-        AudioManager.instance.ButtonSfx();
+        AudioManager.instance.PlaySound(SoundEffectType.ButtonClip);
         rankingPanel.SetActive(true);
         Start_Panel.SetActive(false);
         RankUI.Instance.UpdateRankText();
     }
     private void OnBackMian()
     {
-        AudioManager.instance.ButtonSfx();
+        AudioManager.instance.PlaySound(SoundEffectType.ButtonClip);
 
         rankingPanel.SetActive(false);
         Start_Panel.SetActive(true);
     }
     private void OnExitGame()
     {
-        AudioManager.instance.ButtonSfx();
+        AudioManager.instance.PlaySound(SoundEffectType.ButtonClip);
         Application.Quit();
         Debug.Log("ÍË³öÓÎÏ·");
     }

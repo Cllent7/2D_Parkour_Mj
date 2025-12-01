@@ -7,7 +7,7 @@ public class Obstacle : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            AudioManager.instance.obstacleSfx();
+            AudioManager.instance.PlaySound(SoundEffectType.obstacleClip);
             GameEvents.TriggerPlayerDied();
         }
     }

@@ -14,7 +14,6 @@ public class InputManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
             
         }
         else
@@ -25,12 +24,10 @@ public class InputManager : MonoBehaviour
     }
     public void OnjumpButtonClicked()
     {
-        Debug.Log("滑动按钮按下！");
         OnJump?.Invoke();
     }
     public void OnSlideButtonDown()
     {
-        Debug.Log("滑动按钮按下！");
         OnSlideStart?.Invoke();
     }
     public void OnSlideButtonUp()

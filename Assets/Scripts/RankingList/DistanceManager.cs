@@ -20,7 +20,6 @@ public class DistanceManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // 跨场景保留
             InitializePlayerReference(); // 初始化玩家引用
         }
         else

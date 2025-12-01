@@ -50,7 +50,7 @@ public class Level_1_UIManager :MonoBehaviour
     }
     public void ToLevel2()
     {
-        AudioManager.instance.ButtonSfx();
+        AudioManager.instance.PlaySound(SoundEffectType.ButtonClip);
         Time.timeScale = 1;
         SceneManager.LoadScene("Level2");
     }
@@ -68,7 +68,7 @@ public class Level_1_UIManager :MonoBehaviour
     }
     public void ToMain()
     {
-        AudioManager.instance.ButtonSfx();
+        AudioManager.instance.PlaySound(SoundEffectType.ButtonClip);
         GameManager.Instance.ResetGame();
         SceneManager.LoadScene("Statr_Scene");
     }
